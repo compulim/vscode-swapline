@@ -1,0 +1,49 @@
+{
+  "name": "vscode-swapline",
+  "displayName": "Swap line up and down",
+  "description": "Swap line up and down with CTRL+SHIFT+UP/DOWN",
+  "version": "0.0.1",
+  "publisher": "Compulim",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "icon": "icon.png",
+  "galleryBanner.color": "#0D5CAB",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/compulim/vscode-swapline.git"
+  },
+  "bugs": "https://github.com/compulim/vscode-swapline/issues/",
+  "homepage": "https://github.com/compulim/vscode-swapline/blob/master/README.md",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:swapLine.swapLineUp",
+    "onCommand:swapLine.swapLineDown"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [{
+      "command": "swapLine.swapLineUp",
+      "title": "Swap Line Up"
+    }, {
+      "command": "swapLine.swapLineDown",
+      "title": "Swap Line Down"
+    }],
+    "keybindings": [{
+      "command": "swapLine.swapLineUp",
+      "key": "ctrl+shift+up",
+      "mac": "shift+cmd+up",
+      "when": "editorTextFocus"
+    }, {
+      "command": "swapLine.swapLineDown",
+      "key": "ctrl+shift+down",
+      "mac": "shift+cmd+down",
+      "when": "editorTextFocus"
+    }]
+  },
+  "devDependencies": {
+    "vscode": "0.11.x"
+  }
+}
